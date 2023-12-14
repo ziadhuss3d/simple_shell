@@ -16,7 +16,7 @@ int main(void)
 		userInput_buf = NULL;
 		if (isatty(STDIN_FILENO))
 			write(STDOUT_FILENO, "$ ", 2);
-		if (read_user_input(userInput_buf, &buff_size) == -1)
+		if (read_user_input(&userInput_buf, &buff_size) == -1)
 		{
 			free(userInput_buf);
 			break;
